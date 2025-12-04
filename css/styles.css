@@ -1,0 +1,463 @@
+:root {
+    /* Neutral Colors */
+    --neutral-0: hsl(0, 0%, 100%);
+    --neutral-300: hsl(252, 6%, 83%);
+    --neutral-500: hsl(245, 15%, 58%);
+    --neutral-700: hsl(245, 19%, 35%);
+    --neutral-900: hsl(248, 70%, 10%);
+
+    /* Orange Colors */
+    --orange-500: hsl(7, 88%, 67%);
+    --orange-700: hsl(7, 71%, 60%);
+
+    /* Gradient (text) */
+    --gradient-text: linear-gradient(to right,
+            hsl(7, 86%, 67%),
+            hsl(0, 0%, 100%));
+
+    /*Typography*/
+    --h1-size: 3rem;
+
+}
+
+
+body {
+    font-family: Inconsolata, monospace;
+    color: var(--neutral-0);
+}
+
+
+
+/* ============================
+   MOBILE FIRST (base styles)
+   ============================ */
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/background-mobile.png");
+    background-size: cover;
+    position: absolute;
+    z-index: -4;
+}
+
+.pattern {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/pattern-lines.svg");
+    background-size: cover;
+    position: absolute;
+    z-index: -3;
+}
+
+.squiggly-lines-top {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+
+    background-image: url("../assets/images/pattern-squiggly-line-top.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: top right;
+}
+
+.squiggly-lines-bottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+
+    background-image: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: bottom left;
+}
+
+.pattern-circle {
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/images/pattern-circle.svg");
+    background-repeat: no-repeat;
+    background-position: right 32% top 65%;
+    z-index: -1;
+}
+
+
+
+/* ============================
+   TABLET (min-width: 426px)
+   ============================ */
+@media (min-width: 426px) {
+    .bg {
+        background-image: url("../assets/images/background-tablet.png");
+    }
+
+    .squiggly-lines-bottom {
+        background-image: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+    }
+}
+
+
+
+/* ============================
+   DESKTOP (min-width: 769px)
+   ============================ */
+@media (min-width: 769px) {
+    .bg {
+        background-image: url("../assets/images/background-desktop.png");
+    }
+
+    .squiggly-lines-bottom {
+        background-image: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg");
+    }
+}
+
+
+
+.wrapper {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.drop-area-container p:first-child {
+    text-align: left;
+}
+
+.drop-area-container {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.upload-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.upload-message img {
+    display: block;
+    max-width: 4rem;
+    height: auto;
+}
+
+.upload-message p {
+    margin: 0;
+}
+
+
+.drop-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 22.5rem;
+    padding: 1.25rem;
+    border: 0.125rem dashed #999;
+    border-radius: 0.75rem;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.25s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.drop-area.highlight {
+    border-color: var(--orange-500);
+    background: var(--neutral-0);
+}
+
+
+.image-preview-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview-image {
+    width: 3.125rem;
+    height: 3.125rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 0.625rem;
+}
+
+.image-actions {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.image-actions button {
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--orange-500);
+    color: var(--neutral-0);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.image-actions button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.info-p-correct {
+    color: var(--neutral-500);
+    font-size: 0.68rem;
+}
+
+.icon-info {
+    height: 1.125rem;
+    color: var(--neutral-500);
+}
+
+
+
+.form {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 22.5rem;
+    /*Might change*/
+}
+
+.form label {
+    text-align: left;
+}
+
+
+input:not([type="file"]) {
+    border-radius: 0.625rem;
+    padding: 0.625rem 0.9375rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.125rem solid rgba(255, 255, 255, 0.3);
+    color: var(--neutral-0);
+}
+
+input:not([type="file"])::placeholder,
+.upload-message p {
+    color: var(--neutral-300);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    /* small gap between label and input */
+}
+
+.generate-btn {
+    background-color: var(--orange-500);
+    color: var(--neutral-900);
+    font-weight: 600;
+    border-radius: .625rem;
+    padding: .75rem 0;
+    box-shadow: 5px 5px 15px 5px #000000;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.generate-btn:hover {
+    opacity: 0.7;
+}
+
+/* footer {
+    margin-top: 2.5rem;
+    font-size: 0.75rem;
+    color: var(--neutral-500);
+    text-align: center;
+    background-color: transparent;
+} */
+
+
+/*Generated Data From User To Ticket*/
+
+
+
+
+/*hidden container SUCCESS*/
+.generated-ticket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+/*H1 replacement*/
+.success-message>p:first-of-type {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+/*Generated Name Span*/
+.generated-name {
+    font-size: inherit;
+    background: var(--gradient-text);
+    background-clip: text;
+    color: transparent;
+}
+
+.email-info {
+    font-size: 1.3rem;
+}
+
+.success-message>p:first-of-type {
+    font-size: 2rem
+}
+
+/*Generated email*/
+.generated-email {
+    color: var(--orange-700)
+}
+
+
+
+
+/*Ticket Section*/
+
+.ticket {
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-img {
+    margin-top: 30px;
+    position: relative;
+    /* absolute children anchor to this */
+    width: 90%;
+}
+
+
+
+.ticket-absolute {
+    position: absolute;
+    inset: 6%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.generated-ticket-num {}
+
+.ticket-date {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.ticket-avatar {
+    width: 50px;
+    border-radius: 10%;
+}
+
+
+
+.ticket-avatargithub {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.avatar-name-github {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.whitename {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: inherit;
+
+}
+
+
+.avatar-name-github>div {
+    display: flex;
+}
+
+.icon-github {
+    width: 20px;
+}
+
+.generated-ticket-num {
+    color: var(--neutral-500);
+    font-size: 1.2rem;
+    rotate: 90deg;
+    position: absolute;
+    right: -15px;
+    top: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*General Error */
+.error {
+    color: var(--orange-500);
+}
+
+/* Email Error */
+
+.email-error {
+    padding-top: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--orange-700);
+}
+
+.drop-error {
+    border: 2px solid var(--orange-700)
+}
+
+.input-error {
+    border: 2px solid var(--orange-700) !important;
+}
+
+.hidden {
+    display: none;
+
+}

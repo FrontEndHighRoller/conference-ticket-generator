@@ -1,0 +1,71 @@
+/* ==============================================
+   🌐 GLOBAL PROJECT FOUNDATION (2025 Best Practice)
+   Works together with normalize.css
+   ============================================== */
+
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-size: 1rem;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+button,
+input,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
