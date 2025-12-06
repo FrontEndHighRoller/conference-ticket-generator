@@ -2,7 +2,7 @@
 
 ### 🎥 Project Demo (Loom Video)
 
-[![Watch the demo]([YOUR_LOOM_LINK](https://www.loom.com/share/b0ffda3e92a2431a85614f9bea8c0333))
+https://www.loom.com/share/b0ffda3e92a2431a85614f9bea8c0333
 
 ![Design preview for the Conference ticket generator coding challenge](./preview.jpg)
 
