@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+  <title>Conference ticket generator</title>
+
+
+</head>
+
+<body>
+  <main>
+    <div class="bg"></div>
+    <div class="pattern"></div>
+    <div class="squiggly-lines-bottom"></div>
+    <div class="squiggly-lines-top"></div>
+    <div class="pattern-circle"></div>
+
+
+
+
+    <div class="wrapper" id="wrapper">
+
+      <img src="assets/images/logo-full.svg" fetchpriority=high alt="">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+
+      <p>Secure your spot at next year's biggest coding conference.</p>
+
+      <div class="drop-area-container">
+        <p>Upload Avatar</p>
+        <div class="drop-area browse" id="drop-area">
+          <div class="upload-message" id="upload-message">
+            <img src="assets/images/icon-upload.svg" alt="upload icon">
+            <p>Drag and drop or click to upload</p>
+          </div>
+
+          <input type="file" id="file-input" accept="image/*" hidden>
+          <div class="image-preview-container" id="image-preview-container">
+            <img class="preview-image" id="preview-image" alt="Image Preview" />
+            <div class="image-actions">
+              <button id="remove-btn">Remove Image</button>
+              <button id="change-btn">Change Image</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="info-row" id="info-row">
+
+          <svg class="icon-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+            <path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              d="M8.004 10.462V7.596M8 5.569v-.042" />
+          </svg>
+
+          <p class="info-p-correct" id="info-p-correct">Upload your photo (JPG or PNG, max size: 500KB)</p>
+
+          <p class="info-p-error hidden" id="info-p-error">File too large. Please upload a photo under 500kb</p>
+        </div>
+
+      </div>
+
+
+
+      <form class="form" id="form" onSubmit="handleSubmit()">
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input class="email" type="email" id="email" placeholder="example@email.com" />
+
+          <!-- Email Error -->
+          <div id="email-error" class="email-error error hidden">
+            <svg class="icon-info error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
+              <path fill="currentColor" d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042" />
+            </svg>
+
+            <p>Please enter a valid email address.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" placeholder="@yourusername" />
+        </div>
+
+        <button class="generate-btn" id="generate-btn">Generate My Ticket</button>
+
+      </form>
+
+    </div>
+
+
+    <div class="generated-ticket-container hidden" id="success-wrapper">
+
+      <div class="success-message">
+
+        <img src="assets/images/logo-full.svg" alt="">
+
+        <p>Congrats, <span class="generated-name" id="generated-name">Jonathan Kristof</span>! Your ticket is
+          ready.</p>
+
+        <p class="email-info"> We've emailed your ticket to <span class="generated-email"
+            id="generated-email">jon.kris@gmail.com</span>
+          and will send
+          updates
+          in the run up to the event.</p>
+      </div>
+
+
+
+
+
+      <div class="ticket">
+
+        <div class="ticket-img">
+          <img src="assets/images/pattern-ticket.svg" alt="">
+
+          <div class="ticket-absolute">
+
+            <div class="ticket-logodate">
+              <img class="ticket-logo-img" src="assets/images/logo-full.svg" alt="">
+              <p class="ticket-date">Jan 31, 2025 / Austin, TX</p>
+            </div>
+
+            <div class="ticket-avatargithub">
+              <img class="ticket-avatar" src="assets/images/image-avatar.jpg" alt="">
+
+              <div class="avatar-name-github">
+                <p class="generated-name whitename" id="generated-name">Jonathan Kristof</p>
+                <div>
+                  <img class="icon-github" src="assets/images/icon-github.svg" alt="">
+                  <span class="generated-github ticket-github" id="ticket-github">@123KristofJon</span>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="generated-ticket-num" id="generated-ticket-num">#123545</p>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/FrontEndHighRoller">Dennis Rumanek</a>.
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
