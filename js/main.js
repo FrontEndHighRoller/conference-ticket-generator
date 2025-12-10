@@ -34,6 +34,7 @@ const ticketNum = () => {
     return `#${randomNum}`;
 }
 
+<<<<<<< HEAD
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
@@ -55,11 +56,28 @@ form.addEventListener("submit", (e) => {
     }
 
     if (!emailRegex.test(emailVal)) {
+=======
+
+generateBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    nameInput.value = nameInput.value.trim();
+    emailInput.value = emailInput.value.trim();
+    githubInput.value = githubInput.value.trim();
+
+    if (!nameInput.value) {
+        alert("Please enter your full name.");
+        return;
+    }
+
+    if (!emailInput.value) {
+>>>>>>> 3eabf47a756dc0e808ddee39c9c64b72364b7936
         emailErrorDiv.classList.remove("hidden");
         emailInput.classList.add("input-error");
         return;
     }
 
+<<<<<<< HEAD
     if (!githubRegex.test(githubVal)) {
         alert("Please enter a valid GitHub username (1-39 chars, no leading/trailing hyphen).");
         return;
@@ -70,6 +88,14 @@ form.addEventListener("submit", (e) => {
     const uploadedAvatar = localStorage.getItem("uploadedAvatar");
     const previewHasDataUrl = previewImage && previewImage.src && previewImage.src.startsWith("data:");
     if (!uploadedAvatar && !previewHasDataUrl) {
+=======
+    if (!githubInput.value) {
+        alert("Please enter your GitHub username.");
+        return;
+    }
+
+    if (!previewImage.src) {
+>>>>>>> 3eabf47a756dc0e808ddee39c9c64b72364b7936
         alert("Please upload your photo.");
         return;
     }
