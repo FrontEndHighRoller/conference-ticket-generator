@@ -96,34 +96,7 @@ h1 {
 
 
 
-/* ============================
-   TABLET (min-width: 426px)
-   ============================ */
-@media (min-width: 426px) {
-    .bg {
-        background-image: url("../assets/images/background-tablet.png");
-    }
 
-    .squiggly-lines-bottom {
-        background-image: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
-    }
-}
-
-
-
-/* ============================
-   DESKTOP (min-width: 769px)
-   ============================ */
-@media (min-width: 769px) {
-    .bg {
-        background-image: url("../assets/images/background-desktop.png");
-    }
-
-    .squiggly-lines-bottom {
-        background-image: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg");
-    }
-
-}
 
 
 
@@ -304,11 +277,13 @@ footer {
     justify-content: center;
     text-align: center;
     color: var(--neutral-500);
+    font-size: clamp(0.75rem, 2vw, 1rem);
 
 }
 
 .attribution a {
     text-decoration: underline;
+
 }
 
 
@@ -323,7 +298,6 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     gap: 1.25rem;
     padding: 1.25rem;
 }
@@ -362,6 +336,10 @@ footer {
     color: var(--orange-700)
 }
 
+.email-info {
+    text-align: center;
+}
+
 
 
 
@@ -373,12 +351,13 @@ footer {
 }
 
 .ticket-img {
-    margin-top: 1.875rem;
     position: relative;
-    /* absolute children anchor to this */
     width: 90%;
-}
+    max-width: 600px;
+    margin-inline: auto;
+    overflow: hidden;
 
+}
 
 
 .ticket-absolute {
@@ -386,37 +365,45 @@ footer {
     inset: 6%;
     display: flex;
     flex-direction: column;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    font-size: clamp(0.7rem, 1.4vw, 1rem);
 }
 
+.ticket-logo-img {
+    max-width: 60%
+}
 
 .ticket-date {
+    font-size: clamp(0.6rem, 1vw, 5rem);
+    padding-left: 15%;
     text-align: left;
-    padding-left: 50px;
 }
 
 .ticket-avatar {
-    width: 3.125rem;
-    border-radius: 10%;
+    width: clamp(1.5rem, 6vw, 3.125rem);
+    height: clamp(1.5rem, 6vw, 3.125rem);
 }
+
+
+
 
 
 
 .ticket-avatargithub {
     margin-top: auto;
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .avatar-name-github {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    justify-content: space-between;
 }
 
 .whitename {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     font-weight: 700;
     color: inherit;
 
@@ -425,27 +412,69 @@ footer {
 
 .avatar-name-github>div {
     display: flex;
+    align-items: center;
+    gap: 0.25rem;
 }
 
 .icon-github {
-    width: 1.25rem;
+    width: 1em;
 }
+
 
 .generated-ticket-num {
     color: var(--neutral-500);
-    font-size: 1.2rem;
     rotate: 90deg;
     position: absolute;
-    right: -0.9375rem;
+    right: -7%;
     top: 40%;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+
+/* ============================
+   MOBILE L (min-width: 484px)
+   ============================ */
+@media (min-width: 484px) {}
+
+
+/* ============================
+   TABLET (min-width: 426px)
+   ============================ */
+@media (min-width: 426px) {
+    .bg {
+        background-image: url("../assets/images/background-tablet.png");
+    }
+
+    .squiggly-lines-bottom {
+        background-image: url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+    }
+
+    .generated-ticket-num {
+        right: -3%;
+    }
 }
 
 
 
 
 
+/* ============================
+   DESKTOP (min-width: 769px)
+   ============================ */
+@media (min-width: 769px) {
+    .bg {
+        background-image: url("../assets/images/background-desktop.png");
+    }
 
+    .squiggly-lines-bottom {
+        background-image: url("../assets/images/pattern-squiggly-line-bottom-desktop.svg");
+    }
 
+    .ticket-date {
+        padding-left: 10%;
+    }
+
+}
 
 
 
