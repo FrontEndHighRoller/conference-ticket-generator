@@ -40,20 +40,6 @@
 
 ---
 
-## 📂 Project Structure
-
-├── index.html
-├── css/
-│ ├── normalize.css
-│ ├── base.css
-│ └── styles.css
-├── js/
-│ └── main.js
-├── assets/
-│ └── images/
-
----
-
 ## 🧠 What I Learned
 
 - Implementing **drag-and-drop file uploads**
