@@ -16,6 +16,20 @@
 
 ---
 
+## 🧠 What I Learned
+
+- Implementing **drag-and-drop file uploads**
+- Using the **FileReader API** for live image previews
+- Writing **robust regex-based form validation**
+- Managing UI state without frameworks
+- Structuring scalable, maintainable CSS
+- Creating smooth UX transitions using class toggling
+- Persisting user data with **localStorage**
+
+> 📌 This project was built as part of a **Frontend Mentor challenge**, helping me strengthen real-world frontend problem-solving skills and attention to UI/UX details.
+
+---
+
 ## 🛠️ Tech Stack
 
 - **HTML5** – Semantic structure & accessibility  
@@ -37,20 +51,6 @@
 - Auto-generated unique ticket number  
 - Seamless UI transition from form → ticket  
 - Gradient text & layered background effects  
-
----
-
-## 🧠 What I Learned
-
-- Implementing **drag-and-drop file uploads**
-- Using the **FileReader API** for live image previews
-- Writing **robust regex-based form validation**
-- Managing UI state without frameworks
-- Structuring scalable, maintainable CSS
-- Creating smooth UX transitions using class toggling
-- Persisting user data with **localStorage**
-
-> 📌 This project was built as part of a **Frontend Mentor challenge**, helping me strengthen real-world frontend problem-solving skills and attention to UI/UX details.
 
 ---
 
