@@ -58,7 +58,7 @@
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/FrontEndHighRoller/fylo-landing-page.git
+   git clone https://github.com/FrontEndHighRoller/conference-ticket-generator.git
 2. Open index.html in your browser
 3. Resize the screen to see responsive layouts and image switching in action 🎯
 
