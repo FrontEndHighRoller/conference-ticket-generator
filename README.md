@@ -58,7 +58,17 @@
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/conference-ticket-generator.git
-   
+   git clone https://github.com/FrontEndHighRoller/fylo-landing-page.git
 2. Open index.html in your browser
-3. Upload an avatar, fill in details, and generate your ticket 🎉
+3. Resize the screen to see responsive layouts and image switching in action 🎯
+
+---
+
+🙋‍♂️ Author
+Dennis Rumanek
+
+GitHub: https://github.com/FrontEndHighRoller
+
+LinkedIn: https://www.linkedin.com/in/dennis-rumanek/
+
+⭐ If you like this solution, feel free to star the repository!
